@@ -169,12 +169,12 @@
       const lines = Array.from(document.querySelectorAll('.body-text'));
       const sig = document.getElementById('sig');
       let i = 0;
-      const delayBetween = 5000; // ms
+      const delayBetween = 9000; // ms
       function showNext(){
         if(i < lines.length){
           lines[i].classList.add('show');
           // scroll so newly revealed is visible
-          lines[i].scrollIntoView({behavior:'smooth', block:'center'});
+          lines[i].scrollIntoView({behavior:'smooth', block:'nearest'});
           i++;
           setTimeout(showNext, delayBetween);
         } else {
@@ -216,3 +216,4 @@
 </body>
 
 </html>
+
